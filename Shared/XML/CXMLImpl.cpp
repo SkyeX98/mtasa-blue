@@ -13,7 +13,7 @@
 #define ALLOC_STATS_MODULE_NAME "xml"
 #include <sys/stat.h>
 #ifndef MAX_PATH
-#define MAX_PATH 260
+#define MAX_PATH 265
 #endif
 #include "SharedUtil.hpp"
 
@@ -42,6 +42,7 @@ CXMLFile* CXMLImpl::CreateXML(const char* szFilename, bool bUseIDs, bool bReadOn
 void CXMLImpl::DeleteXML(CXMLFile* pFile)
 {
     delete pFile;
+    return NULL;
 }
 
 CXMLNode* CXMLImpl::CreateDummyNode(void)
